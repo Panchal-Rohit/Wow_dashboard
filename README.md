@@ -131,8 +131,8 @@ This project is built for:
 
 ## 🌐 Connect With Me
 
-* GitHub: https://github.com/your-username
-* Email: [your-email@example.com](mailto:your-email@example.com)
+* GitHub: https://github.com/Panchal-Rohit
+* Email: [rohitkumarpanchal078@gmail.com](mailto:rohitkumarpanchal078@gmail.com)
 
 ---
 
