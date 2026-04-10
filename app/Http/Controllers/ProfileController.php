@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -26,11 +27,6 @@ class ProfileController extends Controller
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email'],
-            'phone' => ['nullable', 'string'],
-            'department' => ['nullable', 'string'],
-            'designation' => ['nullable', 'string'],
-            'language' => ['nullable', 'string'],
-            'bio' => ['nullable', 'string'],
             'profile_image' => ['nullable', 'image', 'mimes:jpg,jpeg,png'],
         ]);
 
@@ -48,7 +44,31 @@ class ProfileController extends Controller
             $user->save();
         }
 
-        return back()->with('status', 'profile-updated');
+        return back()->with('success', 'Password updated successfully!');
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => ['required'],
+            'password' => ['required', 'confirmed', 'min:6'],
+        ]);
+
+        $user = auth()->user();
+
+        // Check current password
+        if (!Hash::check($request->current_password, $user->password)) {
+            return back()->withErrors([
+                'current_password' => 'Current password is incorrect'
+            ]);
+        }
+
+        // Update password
+        $user->update([
+            'password' => Hash::make($request->password)
+        ]);
+
+        return back()->with('success', 'Password updated successfully!');
     }
     /**
      * Delete the user's account.
@@ -68,6 +88,6 @@ class ProfileController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return Redirect::to('/');
+        return Redirect::to('/login');
     }
 }
