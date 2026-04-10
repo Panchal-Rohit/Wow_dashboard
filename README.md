@@ -55,7 +55,7 @@ This project demonstrates **real-world Laravel development skills**, clean archi
 
 ### 🏠 Dashboard
 
-<img src="https://raw.githubusercontent.com/Panchal-Rohit/YOUR-REPO-NAME/main/screenshots/dashboard.png" width="100%" />
+<img src="https://raw.githubusercontent.com/Panchal-Rohit/YOUR-REPO-NAME/main/screenshots/dashboard1.png" width="100%" />
 
 ### 👤 Profile Page
 
