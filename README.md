@@ -1,11 +1,11 @@
 <p align="center">
-    <img src="https://img.icons8.com/fluency/96/dashboard-layout.png" width="80" />
+    <img src="https://img.icons8.com/fluency/96/dashboard-layout.png" width="90" />
 </p>
 
 <h1 align="center">🚀 Full Authentication Dashboard</h1>
 
 <p align="center">
-A modern and fully functional authentication system with a clean dashboard UI built using Laravel & Bootstrap.
+A modern and fully functional authentication system with a professional dashboard UI built using Laravel & Bootstrap.
 </p>
 
 <p align="center">
@@ -19,10 +19,10 @@ A modern and fully functional authentication system with a clean dashboard UI bu
 
 ## 📌 About Project
 
-**Full Authentication Dashboard** is a complete user management system developed using Laravel.
-It includes all essential authentication features along with a modern and responsive UI.
+**Full Authentication Dashboard** is a complete user authentication and management system built with Laravel.
+It includes all essential features like login, registration, password reset, email verification, and profile management.
 
-This project is designed to demonstrate **real-world Laravel development skills** with proper structure and clean code.
+This project demonstrates **real-world Laravel development skills**, clean architecture, and modern UI/UX design.
 
 ---
 
@@ -53,7 +53,15 @@ This project is designed to demonstrate **real-world Laravel development skills*
 
 ## 📷 Screenshots
 
-> Add your project screenshots here
+### 🏠 Dashboard
+
+<img src="https://raw.githubusercontent.com/Panchal-Rohit/YOUR-REPO-NAME/main/screenshots/dashboard.png" width="100%" />
+
+### 👤 Profile Page
+
+<img src="https://raw.githubusercontent.com/Panchal-Rohit/YOUR-REPO-NAME/main/screenshots/profile.png" width="100%" />
+
+> 📌 Note: Upload your images in `screenshots` folder inside your repo.
 
 ---
 
@@ -62,13 +70,13 @@ This project is designed to demonstrate **real-world Laravel development skills*
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Panchal-Rohit/YOUR-REPO-NAME.git
 ```
 
 ### 2️⃣ Go to Project Folder
 
 ```bash
-cd your-repo-name
+cd YOUR-REPO-NAME
 ```
 
 ### 3️⃣ Install Dependencies
@@ -87,7 +95,7 @@ php artisan key:generate
 
 ### 5️⃣ Configure Database
 
-Update `.env` file with your database details.
+Update `.env` file with your database credentials.
 
 ### 6️⃣ Run Migration
 
@@ -118,21 +126,21 @@ This project is built for:
 
 * Learning Laravel Authentication System
 * Building Admin Dashboard UI
-* Real-world project practice
+* Real-world project implementation
 * Portfolio showcase
 
 ---
 
 ## 🧑‍💻 Developer
 
-**Rantox Digital 🚀**
+**Rohit Panchal (Rantox Digital 🚀)**
 
 ---
 
 ## 🌐 Connect With Me
 
-* GitHub: https://github.com/Panchal-Rohit
-* Email: [rohitkumarpanchal078@gmail.com](mailto:rohitkumarpanchal078@gmail.com)
+* 🔗 GitHub: https://github.com/Panchal-Rohit
+* 📧 Email: [rohitkumarpanchal078@gmail.com](mailto:rohitkumarpanchal078@gmail.com)
 
 ---
 
