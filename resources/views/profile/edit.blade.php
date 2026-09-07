@@ -159,7 +159,7 @@
 
 
 
-                                <form method="POST" action="{{ route('password.update') }}">
+                                <form method="POST" action="{{ route('profile.password.update') }}">
                                     @csrf
                                     @method('put')
 
@@ -170,6 +170,7 @@
                                         <label class="form-label fw-semibold text-primary-light text-sm mb-8">
                                             Current Password <span class="text-danger-600">*</span>
                                         </label>
+                                    
                                         <div class="position-relative">
                                             <input type="password" name="current_password" class="form-control radius-8"
                                                 id="current-password" placeholder="Enter Current Password" required>

@@ -44,28 +44,28 @@ class ProfileController extends Controller
             $user->save();
         }
 
-        return back()->with('success', 'Password updated successfully!');
+        return back()->with('success', 'Profile updated successfully!');
     }
 
-    public function updatePassword(Request $request)
+    public function updatePassword(Request $request): RedirectResponse
     {
-        $request->validate([
+        $validated = $request->validate([
             'current_password' => ['required'],
             'password' => ['required', 'confirmed', 'min:6'],
         ]);
 
-        $user = auth()->user();
+        $user = $request->user();
 
-        // Check current password
-        if (!Hash::check($request->current_password, $user->password)) {
-            return back()->withErrors([
-                'current_password' => 'Current password is incorrect'
-            ]);
+        if (!Hash::check($validated['current_password'], $user->password)) {
+            return back()
+                ->withErrors([
+                    'current_password' => 'Current password is incorrect.',
+                ])
+                ->withInput();
         }
 
-        // Update password
         $user->update([
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($validated['password']),
         ]);
 
         return back()->with('success', 'Password updated successfully!');
